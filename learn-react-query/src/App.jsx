@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-
 import './App.css'
 import HomePage from './components/HomePage.jsx'
+import SuperherosPage from './components/SuperherosPage.jsx'
+import RQSuperherosPage from './components/RQSuperherosPage.jsx'
 
 function App() {
   return (
@@ -20,9 +21,13 @@ function App() {
             </li>
           </ul>
         </nav>
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-        </Routes>
+        <div className="container">
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/super-heroes' element={<SuperherosPage />} />
+            <Route path='/rq-super-heroes' element={<RQSuperherosPage />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   )
