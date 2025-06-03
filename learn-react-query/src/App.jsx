@@ -4,11 +4,12 @@ import HomePage from './components/HomePage.jsx'
 import SuperherosPage from './components/SuperherosPage.jsx'
 import RQSuperherosPage from './components/RQSuperherosPage.jsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+const queryClient=new QueryClient() //instance of queryClient
 
 
 function App() {
   return (
-    <QueryClientProvider >
+    <QueryClientProvider client={queryClient} >
   
     <Router>
       <div>
